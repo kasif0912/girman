@@ -1,0 +1,89 @@
+/* Header.css */
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  background: #ffffff;
+  color: black;
+  position: relative;
+  box-shadow: 0px 1.41px 8.43px 0px #00000040;
+  height: 10vh;
+}
+
+.navbar .logo1 img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  background-color: red;
+}
+
+.navbar .list {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .list a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar .list a:hover {
+  color: #3063e6;
+  text-decoration: Underline;
+}
+
+/* Hamburger Menu Icon */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: black; /* Default color for desktop view */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar .list {
+    display: none; /* Hide the links initially on small screens */
+    flex-direction: column;
+    /* gap: 15px; */
+    box-shadow: 0px 1.41px 8.43px 0px #00000040;
+    background-color: white;
+    position: absolute;
+    top: 65px;
+    right: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 120px;
+  }
+
+  .navbar .logo img{
+    height: 30px;
+
+  }
+  /* Show links when mobile menu is active */
+  .navbar .list.active {
+    display: flex;
+  }
+
+  /* Show the hamburger icon on small screens */
+  .menu-toggle {
+    display: block;
+    color: black; /* Visible accent color for mobile */
+  }
+}
